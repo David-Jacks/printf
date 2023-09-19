@@ -52,5 +52,6 @@ int conv_spec(const char *format, int count, va_list args)
 			write(1, format, 1);
 			break;
 	}
+	write(1, "\n", 1);
 	return (count);
 }
