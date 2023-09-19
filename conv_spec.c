@@ -9,16 +9,21 @@
  */
 int conv_spec(const char *format, int count, va_list args)
 {
+	char ans;
+	char *pans;
+	int intAns;
+	int intAns1;
+
 	switch (*format)
 	{
 		case 'c':
-			char ans = va_arg(args, int);
+			ans = va_arg(args, int);
 
 			write(1, &ans, 1);
 			count++;
 			break;
 		case 's':
-			char *pans = va_arg(args, char *);
+			pans = va_arg(args, char *);
 
 			if (pans != NULL)
 			{
@@ -34,12 +39,12 @@ int conv_spec(const char *format, int count, va_list args)
 			count++;
 			break;
 		case 'd':
-			int intAns = va_arg(args, int);
+			intAns = va_arg(args, int);
 
 			count += print_int(count, intAns);
 			break;
 		case 'i':
-			int intAns1 = va_arg(args, int);
+			intAns1 = va_arg(args, int);
 
 			count += print_int(count, intAns1);
 			break;

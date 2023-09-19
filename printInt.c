@@ -10,17 +10,17 @@
 int print_int(int a, int i)
 {
 	int ans, j, m = 1, k, count = 0;
-	int new, flag = 0;
+	int new1, flag = 0;
 
 	if (i < 0)
 	{
 		flag = 1;
 		i = (i * -1);
 	}
-	new = i;
-	while (new != 0)
+	new1 = i;
+	while (new1 != 0)
 	{
-		new = new / 10;
+		new1 = new1 / 10;
 		count++;
 	}
 
