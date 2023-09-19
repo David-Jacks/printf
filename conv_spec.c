@@ -1,5 +1,12 @@
 #include "main.h"
-
+/**
+ *conv_spec - evaluates the conversion specifies
+ *@format: considers the format string
+ *@count: considers the character count to be printed to the output
+ *@args: takes the variable argument to be printed
+ *
+ *Return: returns the count
+ */
 int conv_spec(const char *format, int count, va_list args)
 {
 	switch (*format)
@@ -15,12 +22,7 @@ int conv_spec(const char *format, int count, va_list args)
 
 			if (pans != NULL)
 			{
-				while (*pans)
-				{
-					write(1, pans, sizeof(*pans));
-					count++;
-					pans++;
-				}
+				count += print_str(pans, count);
 			} else
 			{
 				write(1, "(null)", 6);
@@ -33,10 +35,12 @@ int conv_spec(const char *format, int count, va_list args)
 			break;
 		case 'd':
 			int intAns = va_arg(args, int);
+
 			count += print_int(count, intAns);
 			break;
 		case 'i':
 			int intAns1 = va_arg(args, int);
+
 			count += print_int(count, intAns1);
 			break;
 		default:

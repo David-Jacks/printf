@@ -3,6 +3,13 @@
 #include <unistd.h>
 #include "main.h"
 
+/**
+ *_printf - custom printf function by Miriam and David
+ *@format: format string to be considered
+ *
+ *Return: return the count of characters to be printed
+ */
+
 int _printf(const char *format, ...)
 {
 	int count = 0;
