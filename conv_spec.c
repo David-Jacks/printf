@@ -31,6 +31,14 @@ int conv_spec(const char *format, int count, va_list args)
 			write(1, format, 1);
 			count++;
 			break;
+		case 'd':
+			int intAns = va_arg(args, int);
+			count += print_int(count, intAns);
+			break;
+		case 'i':
+			int intAns1 = va_arg(args, int);
+			count += print_int(count, intAns1);
+			break;
 		default:
 			write(1, format, 1);
 			break;
