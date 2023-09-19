@@ -16,6 +16,5 @@ int print_str(char *pans, int count)
 		count++;
 		pans++;
 	}
-	write(1, "\n", 1);
 	return (count);
 }

@@ -40,6 +40,5 @@ int print_int(int a, int i)
 		a++;
 		m = m / 10;
 	}
-	write(1, "\n", 1);
 	return (a);
 }
