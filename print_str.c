@@ -4,7 +4,6 @@
  *print_str - a function to print strings to standard output
  *@pans: string to be printed
  *@count: the count of characters to be printed
- *@args: argument to be considered
  *Return: returns the count value
  **/
 
