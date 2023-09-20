@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *conv_spec - evaluates the conversion specifies
+ *conv_spec2 - evaluates the conversion specifies
  *@format: considers the format string
  *@count: considers the character count to be printed to the output
  *@args: takes the variable argument to be printed

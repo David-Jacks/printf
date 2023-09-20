@@ -4,6 +4,7 @@
  *@format: considers the format string
  *@count: considers the character count to be printed to the output
  *@args: takes the variable argument to be printed
+ *@flag: points to flag to test if this have been visited
  *
  *Return: returns the count
  */

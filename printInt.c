@@ -43,6 +43,13 @@ int print_int(int a, int i)
 }
 
 /****************print unsigned int*************************/
+/**
+ *print_int2 - prints integers to standard output
+ *@un: takes in the integer to be printed to standard output
+ *@count: the count of the printed integers to standard output
+ *
+ *Return: returns the count of integer value to be pinted
+ **/
 
 int print_int2(int count, unsigned int un)
 {
