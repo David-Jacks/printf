@@ -7,5 +7,5 @@
 int _printf(const char *format, ...);
 int conv_spec(const char *, int, va_list);
 int print_int(int, int);
-int print_str(char *, int);
+int print_str(char *, int, va_list);
 #endif
