@@ -23,3 +23,4 @@ We handled these format specifiers -
 5. Else if the next character is 's', we use va_arg to extract a string literal using a character pointer.
 6. Else if the next character is '%' we use the va_arg to extract the '%' percent character.
 7. However, if we have a format specifier that doesn't match the indicated ones it prints  it out. Example, %p will be printed out.
+8. We also checked for a null string and set an error to flag it
