@@ -20,7 +20,8 @@ int conv_spec(const char *format, int count, va_list args)
 			count++;
 			break;
 		case 's':
-			count += print_str(pans, count, args);
+			pans = va_arg(args, char *);
+			count += print_str(pans, count);
 			break;
 		case '%':
 			write(1, "%", 1);

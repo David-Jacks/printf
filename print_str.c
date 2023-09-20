@@ -8,10 +8,8 @@
  *Return: returns the count value
  **/
 
-int print_str(char *pans, int count, va_list args)
+int print_str(char *pans, int count)
 {
-	pans = va_arg(args, char *);
-
 	if (pans != NULL)
 	{
 		while (*pans)
