@@ -9,8 +9,7 @@
 
 int print_int(int a, int i)
 {
-	int ans, j, m = 1, k, count = 0;
-	int new1, flag = 0;
+	int ans, j, m = 1, k, count = 0, new1, flag = 0;
 
 	if (i < 0)
 	{
