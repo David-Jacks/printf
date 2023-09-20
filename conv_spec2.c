@@ -9,7 +9,6 @@
  */
 int conv_spec2(const char *format, int count, va_list args)
 {
-	char ans, *pans;
 	unsigned int intAns1, intAns2, intAns3, intAns4;
 
 	switch (*format)
