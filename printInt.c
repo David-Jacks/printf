@@ -41,3 +41,23 @@ int print_int(int a, int i)
 	}
 	return (a);
 }
+
+/****************print unsigned int*************************/
+
+int print_int2(int count, unsigned int un)
+{
+	char buf[12];
+	int a = 0;
+
+	do {
+		buf[a++] = (un % 10) + '0';
+		un /= 10;
+	} while (un > 0);
+
+	while (a > 0)
+	{
+		write(1, &buf[--a], 1);
+		count++;
+	}
+	return (count);
+}

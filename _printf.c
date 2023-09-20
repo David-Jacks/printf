@@ -13,6 +13,8 @@
 int _printf(const char *format, ...)
 {
 	int count = 0;
+	int flagged = 0;
+	int *flag = &flagged;
 	va_list args;
 
 	va_start(args, format);
@@ -27,8 +29,9 @@ int _printf(const char *format, ...)
 				write(1, "error not indicating conversion specifeir", 42);
 				return (-1);
 			}
-			count = conv_spec(format, count, args);
-
+			count = conv_spec(format, count, args, flag);
+			if (!flagged)
+				count = conv_spec2(format, count, args);
 		} else
 		{
 			write(1, format, 1);

@@ -7,10 +7,10 @@
  *
  *Return: returns the count
  */
-int conv_spec(const char *format, int count, va_list args)
+int conv_spec(const char *format, int count, va_list args, int *flag)
 {
 	char ans, *pans;
-	int intAns, intAns1;
+	int intAns;
 
 	switch (*format)
 	{
@@ -18,27 +18,25 @@ int conv_spec(const char *format, int count, va_list args)
 			ans = va_arg(args, int);
 			write(1, &ans, 1);
 			count++;
+			*flag = 1;
 			break;
 		case 's':
 			pans = va_arg(args, char *);
 			count += print_str(pans, count);
+			*flag = 1;
 			break;
 		case '%':
 			write(1, "%", 1);
 			count++;
+			*flag = 1;
 			break;
 		case 'd':
-			intAns = va_arg(args, int);
-			count += print_int(count, intAns);
-			break;
 		case 'i':
-			intAns1 = va_arg(args, int);
-			count += print_int(count, intAns1);
+			intAns = va_arg(args, int);
+			count = print_int(count, intAns);
+			*flag = 1;
 			break;
 		default:
-			write(1, "%", 1);
-			write(1, format, 1);
-			count += 2;
 			break;
 	}
 	return (count);
