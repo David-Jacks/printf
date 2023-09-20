@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 				write(1, "error not indicating conversion specifeir", 42);
 				return (-1);
 			}
-			count += conv_spec(format, count, args);
+			count = conv_spec(format, count, args);
 
 		} else
 		{
